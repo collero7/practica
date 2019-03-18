@@ -4,7 +4,6 @@ app.controller('mainCtrl', ['$scope', '$q', function($scope, $q){
 
 	$scope.miVar = 0;
 
-
 	$scope.sumar = function( num ){
 
 		var q = $q.defer();
