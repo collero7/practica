@@ -18,11 +18,14 @@
         <div class="container" ng-controller="mainCtrl">
             
             <h1>Promesas</h1>
-            <h4>Ejemplo de Promesas</h4>
+            <h4>Ejemplo de Promesas: {{ miVar }}</h4>
             <hr>
             
+            <a ui-sref="main">Ir al main</a>
+            <br>
+            <a ui-sref="usuarios">Ir a usuarios</a>
 
-            {{ miVar }}
+            <div ui-view></div>           
 
 
         </div>
