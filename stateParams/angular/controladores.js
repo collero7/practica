@@ -38,7 +38,5 @@ app.controller('mainCtrl', ['$scope', '$q', function($scope, $q){
 			console.error("Errorrr")
 		});
 
-
-
 	
 }])
