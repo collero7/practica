@@ -1,0 +1,28 @@
+<div ng-controller="tablaCtrl">
+	
+	<div>
+		Introduce el nombre de una pelicula <input type="text" class="form-control" ng-model="titu">
+		<button class="btn btn-primary" ng-click="buscar()">Buscar</button>
+	</div>
+	<br>
+
+	<table class="table table-striped">		
+		<thead>
+			<tr>
+				<th>Titulo</th>
+				<th>Año</th>
+				<th>ID</th>
+				<th>Tipo</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="result in resultadoPeliculas">
+				<td>{{result.Title}}</td>
+				<td>{{result.Year}}</td>
+				<td>{{result.imdbID}}</td>
+				<td>{{result.Type}}</td>
+			</tr>
+		</tbody>	
+	</table>
+
+</div>

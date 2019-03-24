@@ -3,13 +3,26 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Promesas</title>
-
+    
+        <!-- Incluir Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
 
         <!-- Incluir AngularJS -->
         <script src="js/libs/angular.min.js"></script>
         <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
         <script src="angular/app.js"></script>
         <script src="angular/controladores.js"></script>
+        <script src="angular/controladores/tablaCtrl.js"></script>
+
+        <style>
+            div {
+                margin-top: 20px;
+            }
+            a {
+                padding-left: 20px;
+            }
+        </style>
         
         
     </head>    
@@ -22,8 +35,13 @@
             <hr>
             
             <a ui-sref="main">Ir al main</a>
-            <br>
+
             <a ui-sref="usuarios">Ir a usuarios</a>
+
+            <a ui-sref="pruebas">Ir a pruebas</a>
+
+            <a ui-sref="tabla">Ir a tabla</a>
+
 
             <div ui-view></div>           
 

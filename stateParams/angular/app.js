@@ -1,4 +1,4 @@
-var app = angular.module('promesaApp', ['promesaApp.controladores', 'ui.router']);
+var app = angular.module('promesaApp', ['promesaApp.controladores', 'promesaApp.tablaCtrl', 'ui.router']);
 
 app.config(['$stateProvider', '$urlRouterProvider',function($stateProvider, $urlRouterProvider) {
 
@@ -14,6 +14,17 @@ app.config(['$stateProvider', '$urlRouterProvider',function($stateProvider, $url
 		 {
 		 	url: '/users',
 		 	template: '<h2>Modificacion de usuarios</h2><a ui-sref="usuarios.listado">Mostrar listado de usuarios</a><div ui-view></div>'
+		 })
+		.state('pruebas',
+		 {
+		 	url: '/pruebas',
+		 	templateUrl: 'html/pruebas.html'
+		 })
+		.state('tabla',
+		 {
+		 	url: '/tabla',
+		 	controller: 'tablaCtrl',
+		 	templateUrl: 'html/tabla.html'
 		 })
 		.state('usuarios.listado',
 		 {
