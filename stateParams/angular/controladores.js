@@ -38,5 +38,26 @@ app.controller('mainCtrl', ['$scope', '$q', function($scope, $q){
 			console.error("Errorrr")
 		});
 
+	///////////////////////////////// Prueba Date /////////////////////////////////////
+
+	var dia = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"];
+
+	$scope.miNumero = 4;
+	$scope.fecha = new Date('March 14, 2019 13:15:00');
+	$scope.dia = $scope.fecha.getDate();
+	$scope.mes = $scope.fecha.getMonth();
+	$scope.anio = $scope.fecha.getFullYear();
+	$scope.diaSemana = dia[$scope.fecha.getDay()];
+
+	if( $scope.diaSemana === "Viernes" ){
+		$scope.fecha.setDate($scope.fecha.getDate() + 3);
+		$scope.concatena = "Hoy es " + $scope.fecha.getDate() + "/" + ($scope.fecha.getMonth()+1) + "/" + $scope.fecha.getFullYear() + ", y el día de la semana es " + dia[$scope.fecha.getDay()];
+	}else{
+		$scope.concatena = "Hoy es " + $scope.dia + "/" + ($scope.mes+1) + "/" + $scope.anio + ", y el día de la semana es " + $scope.diaSemana;		
+	}
+
+
+
+	
 	
 }])
