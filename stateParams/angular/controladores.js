@@ -58,6 +58,17 @@ app.controller('mainCtrl', ['$scope', '$q', function($scope, $q){
 
 
 
+}]);
+
+///////////////////////////////// Prueba Arrays /////////////////////////////////////
+
+app.controller('variosCtrl', ['$scope', 'Servicios',  function($scope, Servicios){
 	
-	
-}])
+	$scope.miArray = [2, 6, 1, 7, 4];
+
+	$scope.resultado = Servicios.getMap($scope.miArray);
+
+	console.log($scope.resultado, 3);
+
+
+}]);
