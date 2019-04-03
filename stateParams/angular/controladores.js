@@ -38,6 +38,47 @@ app.controller('mainCtrl', ['$scope', '$q', function($scope, $q){
 			console.error("Errorrr")
 		});
 
+//--------------------------------------
+
+	$scope.restar = function(num){
+
+		var q = $q.defer();
+		let valido = true;
+
+		num --;
+
+		setTimeout(function(){
+
+			if(valido){
+				q.resolve(num);
+			}
+			else{
+				q.reject("Se ha producido un error en la resta");
+			}
+
+		}), 3000;
+	
+		return q.promise;
+	}
+
+	$scope.miPromesa = $scope.restar(15);
+
+	$scope.miPromesa.then(
+
+		function(valor){
+			console.log("Promesa de resta cumplida");
+			$scope.miResta = valor;
+		},
+		function(valor){
+			console.log("Ha ocurrido algo en la resta");
+		}
+	);
+
+
+
+
+
+
 	///////////////////////////////// Prueba Date /////////////////////////////////////
 
 	var dia = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"];
@@ -58,6 +99,17 @@ app.controller('mainCtrl', ['$scope', '$q', function($scope, $q){
 
 
 
+}]);
+
+///////////////////////////////// Prueba Arrays /////////////////////////////////////
+
+app.controller('variosCtrl', ['$scope', 'Servicios',  function($scope, Servicios){
 	
-	
-}])
+	$scope.miArray = [2, 6, 1, 7, 4];
+
+	$scope.resultado = Servicios.getMap($scope.miArray);
+
+	console.log($scope.resultado, 3);
+
+
+}]);

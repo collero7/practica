@@ -1,6 +1,6 @@
 <div ng-controller="mainCtrl">
 	
-	<h1>Este es {{ miNumero }}</h1>
+	<h1>Prueba de fechas</h1>
 
 	<p>Mi fecha es {{ fecha }}</p>
 	<p>Mi dia es {{ dia }}</p>
@@ -11,6 +11,18 @@
 	<br>
 	<p>{{ concatena }}</p>
 
+</div>
 
+<hr>
+
+<div ng-controller="variosCtrl">
+
+	<h1>Pruebas de Array</h1>
+	
+	<p>Lista de valores con "map"</p>
+	<ul>
+		<li ng-repeat="valor in resultado">{{ valor }}</li>
+	</ul>
+	
 
 </div>
