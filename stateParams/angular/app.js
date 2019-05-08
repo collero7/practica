@@ -1,4 +1,4 @@
-var app = angular.module('promesaApp', ['promesaApp.controladores', 'promesaApp.tablaCtrl', 'promesaApp.servicios', 'ui.router']);
+var app = angular.module('promesaApp', ['promesaApp.controladores', 'promesaApp.tablaCtrl', 'promesaApp.servicios', 'promesaApp.JavaScriptCtrl', 'ui.router']);
 
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
@@ -25,6 +25,27 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 		 	url: '/tabla',
 		 	controller: 'tablaCtrl',
 		 	templateUrl: 'html/tabla.html'
+		 })
+		.state('javascript',
+		 {
+		 	url: '/javascript',
+		 	controller: 'JavaScriptCtrl',
+		 	templateUrl: 'html/javascript.html',
+		 	params: {
+				id: null
+		 	}
+		 })
+		.state('wem',
+		 {
+		 	url: '/wem',
+		 	controller: 'textosWEMCtrl',
+		 	templateUrl: 'html/wem.html'
+		 })
+		.state('promesas2',
+		 {
+		 	url: '/promesas2',
+		 	controller: 'Promesas2Ctrl',
+		 	templateUrl: 'html/promesas2.html'
 		 })
 		.state('usuarios.listado',
 		 {

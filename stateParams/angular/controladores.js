@@ -1,6 +1,6 @@
 var app = angular.module('promesaApp.controladores', []);
 
-app.controller('mainCtrl', ['$scope', '$q', function($scope, $q){
+app.controller('mainCtrl', ['$scope', '$q', '$state', function($scope, $q, $state){
 
 	$scope.miVar = 0;
 
@@ -111,5 +111,53 @@ app.controller('variosCtrl', ['$scope', 'Servicios',  function($scope, Servicios
 
 	console.log($scope.resultado, 3);
 
+
+}]);
+
+
+///////////////////////////////// Prueba textos WEM /////////////////////////////////////
+
+
+app.controller('textosWEMCtrl', ['$scope', '$q', 'Servicios',  function($scope, $q, Servicios){
+	
+	 function obtenerTextosWEM(){
+
+		return {
+
+			tituloTextoWEM: Servicios.getTextosWEM('tituloDelTextoWem'),
+
+			cuerpoTextoWEM: Servicios.getTextosWEM('cuerpoDelTextoWem'),
+
+			pieTextoWEM: Servicios.getTextosWEM('pieDelTextoWem')
+
+		};
+	}
+
+	console.log(obtenerTextosWEM());
+
+	
+
+}]);
+
+
+///////////////////////////////// Promesas 2 /////////////////////////////////////
+
+
+app.controller('Promesas2Ctrl', ['$scope', '$q', 'Servicios', '$state',  function($scope, $q, Servicios, $state){
+	
+	$q.all({
+		miVar: Servicios.getNombreApellidos("Cristopher", "Ollero Ortizz")
+	}).then(function(data){
+		$scope.misDatos = "Hola me llamo " + data.miVar.miNombre  + " " + data.miVar.misApellidos;
+	});
+
+	$scope.irA = function(){
+
+		$state.go('javascript', {
+			id: 'Parámetro recibido de promesas2'
+		});
+
+	}
+	
 
 }]);
