@@ -77,13 +77,90 @@ app.controller('JavaScriptCtrl', ['$scope', '$q', '$http', '$state', function($s
 	////////////////// -- Trabajando con Arrays -- //////////////////
 
 
+	/*
+
+	var arr = [5, 7, 3, 6, 1]; 
+
+	console.log(arr);
+
+	arr.sort();
+
+	console.log(arr);
+
+	arr.reverse();
+
+	console.log(arr);
+
+	arr = arr.map(function(param){
+		param *= param;
+		return param;	
+	});
+
+	console.log(arr);
+
+	arr = arr.map(Math.sqrt);
+
+	console.log(arr);
+
+	arr = arr.join('|');
+
+	console.log(arr);
+
+	arr = arr.split('|');
+
+	console.log(arr);
+
+	arr.push("10");
+
+	console.log(arr);
+
+	arr.unshift("0");
+
+	console.log(arr);
+
+	arr.splice(0, 1);
+
+	console.log(arr);
+
+	arr.slice(0, 1);
+
+	console.log(arr);
+
+	*/
 
 
+	////////////////// -- Sobrecarga de operadores -- //////////////////
 
 
+	/*
+
+	function crearProducto(nombre, precio){
+
+		nombre = nombre || "sin nombre";
+		precio = precio || 0;
+
+		console.log("Nombre: " + nombre + ", Precio: " + precio);
+
+	}
+
+	function crearProducto100(nombre){
+		nombre = nombre || "sin nombre";
+
+		crearProducto(nombre, 100);
+	}
 
 
+	crearProducto();
+	crearProducto("Tomates", 1.30);
+	crearProducto100("boli");
 
+	*/
+
+
+	////////////////// -- Polimorfismo -- //////////////////
+
+
+	
 
 
 
