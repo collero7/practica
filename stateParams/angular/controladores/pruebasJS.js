@@ -157,13 +157,140 @@ app.controller('JavaScriptCtrl', ['$scope', '$q', '$http', '$state', function($s
 	*/
 
 
+
+
+
 	////////////////// -- Polimorfismo -- //////////////////
 
+	/*
+
+	function determinarDato(valor){
+
+		console.log("El valor introducido es: ", valor);
+
+		if( valor === undefined ){
+			console.log(valor, " es un dato indefinido");
+		}
+
+		if( typeof valor === "number" ){
+			console.log(valor, " es un dato numérico");
+		}
+
+		if( typeof valor === "string" ){
+			console.log(valor, " es un dato texto");
+		}
+
+		if( typeof valor === "object" ){
+			console.log(valor, " es un dato objeto");
+
+			if( valor instanceof Number ){
+				console.log(valor, " es ua instancia de un número");
+			}
+		}
+
+	}
+
+
+	var miVar = new Number (6);
+	var miVar2 = 6;
+
+	determinarDato(miVar);
+	
+	
+	*/
+
+
+
+
+
+
+	////////////////// -- Funciones y su contexto -- //////////////////
+
+	/*
+
+	function crearFunciones(){
+
+		var arr = [];
+		var num = 1;
+	
+		for(num = 1; num <= 3; num++){
+	
+			arr.push(
+					(function(num){
+						return function(){
+							console.log(num);
+						}
+					})(num)
+				);
+		}
+
+		return arr;
+	}
+
+	var miArray = crearFunciones();
+
+	miArray[0]();
+	miArray[1]();
+	miArray[2]();
 
 	
+	*/
 
 
 
+
+
+	////////////////// -- Funciones y su contexto -- //////////////////
+
+
+	/*
+
+	var num = 80.2342376;
+	var num1 = new Number(8);
+
+	console.log(num);
+	console.log(num1);
+
+	console.log(num.toFixed(3));
+	console.log(num.toPrecision(3));
+
+	var num2 = new Number("7");
+	console.log(num2);
+	console.log(num2.valueOf());
+
+	*/
+
+
+
+
+	////////////////// -- Objeto String -- //////////////////
+
+
+	/*
+
+	var miNombre = "Cristopher Ollero Ortiz";
+
+	console.log(miNombre);
+
+	console.log(miNombre.toUpperCase());
+	console.log(miNombre.toLowerCase());
+
+	console.log(miNombre.indexOf("ph"));
+	console.log(miNombre.lastIndexOf("ph"));
+
+	console.log(miNombre.substr(0, miNombre.indexOf("ro Ortiz")));
+
+	 console.log(miNombre.split());
+
+	 var split = miNombre.split(" ");
+	 console.log(split);
+
+	*/
+
+
+
+
+	////////////////// -- Operaciones con fechas -- //////////////////
 
 
 }]);
