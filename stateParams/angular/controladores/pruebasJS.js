@@ -290,6 +290,27 @@ app.controller('JavaScriptCtrl', ['$scope', '$q', '$http', '$state', function($s
 
 
 
+	////////////////// -- Puertas lógicas -- //////////////////
+
+	var pin = "fdhhd2154";
+	var repitePin = "2154";
+
+	var pin1 = parseInt(pin);
+	var pin2 = parseInt(repitePin);
+
+	//Sentencia de control sobre puertas lógicas
+	if((pin1 === undefined || pin2 === undefined) || (pin.length !== 4 || repitePin.length !== 4) || (pin1 !== pin2) || ( pin1 === NaN || pin2 === NaN )){
+		console.log("Introduce un código PIN correcto, Vanezaaaa!!");
+	}
+	else{
+		console.log("Bien Vanezaaaa!!, eres mu lista!");
+	}
+
+
+
+
+
+
 	////////////////// -- Operaciones con fechas -- //////////////////
 
 
