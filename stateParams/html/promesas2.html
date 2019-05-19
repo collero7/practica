@@ -5,6 +5,19 @@
 	<p>Info: {{ misDatos }}</p>
 
 	<button ng-click="irA()">Ir a JavaScript</button>
+
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<form name="form">
+    	<label for="input">Prueba maxlength</label>
+    	<br>
+    	<input type="number" onkeydown="return event.keyCode !== 69" ng-model="valorIntroducido" id="numero"/><br>
+    	<hr>
+    	<p>{{ valorIntroducido }}</p>
+  </form>
 	
 
 </div>

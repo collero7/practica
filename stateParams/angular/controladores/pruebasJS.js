@@ -292,6 +292,8 @@ app.controller('JavaScriptCtrl', ['$scope', '$q', '$http', '$state', function($s
 
 	////////////////// -- Puertas lógicas -- //////////////////
 
+	/*
+
 	var pin = "fdhhd2154";
 	var repitePin = "2154";
 
@@ -306,12 +308,18 @@ app.controller('JavaScriptCtrl', ['$scope', '$q', '$http', '$state', function($s
 		console.log("Bien Vanezaaaa!!, eres mu lista!");
 	}
 
-
+	*/
 
 
 
 
 	////////////////// -- Operaciones con fechas -- //////////////////
+
+
+	
+
+
+
 
 
 }]);

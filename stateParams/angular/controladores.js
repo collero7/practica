@@ -143,7 +143,7 @@ app.controller('textosWEMCtrl', ['$scope', '$q', 'Servicios',  function($scope, 
 ///////////////////////////////// Promesas 2 /////////////////////////////////////
 
 
-app.controller('Promesas2Ctrl', ['$scope', '$q', 'Servicios', '$state',  function($scope, $q, Servicios, $state){
+app.controller('Promesas2Ctrl', ['$scope', '$document', '$q', 'Servicios', '$state',  function($scope, $document, $q, Servicios, $state){
 	
 	$q.all({
 		miVar: Servicios.getNombreApellidos("Cristopher", "Ollero Ortizz")
@@ -156,8 +156,14 @@ app.controller('Promesas2Ctrl', ['$scope', '$q', 'Servicios', '$state',  functio
 		$state.go('javascript', {
 			id: 'Parámetro recibido de promesas2'
 		});
-
 	}
 	
+
+	var input = document.getElementById('numero');
+
+	input.addEventListener('input',function(){
+	  if (this.value.length > 4) 
+	     this.value = this.value.slice(0,4); 
+	})
 
 }]);
