@@ -159,11 +159,36 @@ app.controller('Promesas2Ctrl', ['$scope', '$document', '$q', 'Servicios', '$sta
 	}
 	
 
+	/*
 	var input = document.getElementById('numero');
 
 	input.addEventListener('input',function(){
 	  if (this.value.length > 4) 
 	     this.value = this.value.slice(0,4); 
 	})
+	*/
+	
+
+	$scope.myFunction = function(event) {
+  		$scope.x = event.keyCode;
+  		//console.log($scope.x);
+	}
+
+	$scope.cambio = function(event){
+		console.log($scope.valorIntroducido)
+		if($scope.x === 101){
+
+			//$scope.valorIntroducido = $scope.valorIntroducido.toString().slice(0,1);
+		}
+		if($scope.valorIntroducido !== null){
+			if ($scope.valorIntroducido.toString().length > 4 || $scope.valorIntroducido){
+
+				$scope.valorIntroducido = parseInt($scope.valorIntroducido.toString().slice(0,4));
+			}
+		}
+	}
+
+
+	
 
 }]);

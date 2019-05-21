@@ -13,11 +13,13 @@
 
 	<form name="form">
     	<label for="input">Prueba maxlength</label>
-    	<br>
-    	<input type="number" onkeydown="return event.keyCode !== 69" ng-model="valorIntroducido" id="numero"/><br>
-    	<hr>
-    	<p>{{ valorIntroducido }}</p>
-  </form>
+    		<br>
+    		<!--<input type="number" onkeydown="return event.keyCode !== 69" ng-model="valorIntroducido" id="numero"/><br>-->
+    		<input type="number" ng-model="valorIntroducido" ng-change="cambio(event)" ng-keypress="myFunction($event)" id="numero"/>
+    		<hr>
+    		<p>{{ valorIntroducido }}</p>
+    		<p>{{ x }}</p>
+  	</form>
 	
 
 </div>
